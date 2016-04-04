@@ -53,7 +53,7 @@
         data-chapter-title="将Gitbook发布到Github Pages"
         data-filepath="basic/gitbook.md"
         data-basepath=".."
-        data-revision="Mon Apr 04 2016 20:24:29 GMT+0800 (CST)"
+        data-revision="Mon Apr 04 2016 23:17:46 GMT+0800 (CST)"
         data-innerlanguage="">
     
 
@@ -282,9 +282,22 @@
 <li>git push origin gh-pages</li>
 </ul>
 </li>
-<li>&#x8BBF;&#x95EE;USERNAME.github.io/web-cookbook&#x67E5;&#x770B;</li>
+<li>&#x8BBF;&#x95EE;USERNAME.github.io/web-cookbook&#x67E5;&#x770B;  </li>
 </ul>
+<h3 id="gulp&#x53D1;&#x5E03;gitbook&#x5230;github-pages">gulp&#x53D1;&#x5E03;Gitbook&#x5230;Github Pages</h3>
+<pre><code>var gulp = require(&quot;gulp&quot;),  
+    deploy = require(&quot;gulp-gh-pages&quot;);
 
+gulp.task(&apos;publish&apos;, function () {  
+  return gulp.src(&quot;_book/\*\*/\*.\*&quot;)
+    .pipe(deploy({
+      remoteUrl: &quot;git@github.com:USERNAME/web-cookbook.git&quot;
+    }))
+    .on(&quot;error&quot;, function(err){
+      console.log(err)
+    })
+});
+</code></pre>
                     
                     </section>
                 
