@@ -53,7 +53,7 @@
         data-chapter-title="将Gitbook发布到Github Pages"
         data-filepath="basic/gitbook.md"
         data-basepath=".."
-        data-revision="Mon Apr 04 2016 23:17:46 GMT+0800 (CST)"
+        data-revision="Thu Apr 07 2016 19:28:45 GMT+0800 (CST)"
         data-innerlanguage="">
     
 
@@ -242,19 +242,19 @@
 <blockquote>
 <p>&#x4EE5;Mac&#x4E3A;&#x4F8B;  </p>
 </blockquote>
-<h3 id="&#x5B89;&#x88C5;nodejs">&#x5B89;&#x88C5;Node.js</h3>
+<h3 id="1-&#x5B89;&#x88C5;nodejs">1. &#x5B89;&#x88C5;Node.js</h3>
 <p><pre><a href="https://nodejs.org/en/download/" target="_blank">Node.js&#x4E0B;&#x8F7D;&#x5730;&#x5740;</a></pre></p>
-<h3 id="&#x5B89;&#x88C5;gitbook">&#x5B89;&#x88C5;Gitbook</h3>
+<h3 id="2-&#x5B89;&#x88C5;gitbook">2. &#x5B89;&#x88C5;Gitbook</h3>
 <pre><code>npm install gitbook-cli -g
-</code></pre><h3 id="&#x5728;github&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x4ED3;&#x5E93;&#xFF0C;&#x6BD4;&#x5982;&#xFF1A;webcookbook">&#x5728;Github&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x4ED3;&#x5E93;&#xFF0C;&#x6BD4;&#x5982;&#xFF1A;web-cookbook</h3>
+</code></pre><h3 id="3-&#x5728;github&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x4ED3;&#x5E93;&#xFF0C;&#x6BD4;&#x5982;&#xFF1A;webcookbook">3. &#x5728;Github&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x4ED3;&#x5E93;&#xFF0C;&#x6BD4;&#x5982;&#xFF1A;web-cookbook</h3>
 <ul>
 <li>&#x514B;&#x9686;&#x5230;&#x672C;&#x5730;&#xFF1A;git clone git@github.com:USERNAME/web-cookbook.git</li>
 </ul>
-<h3 id="&#x521D;&#x59CB;&#x5316;gitbook">&#x521D;&#x59CB;&#x5316;gitbook</h3>
+<h3 id="4-&#x521D;&#x59CB;&#x5316;gitbook">4. &#x521D;&#x59CB;&#x5316;gitbook</h3>
 <ul>
 <li>gitbook init  </li>
 </ul>
-<h3 id="&#x521B;&#x5EFA;&#x5206;&#x652F;">&#x521B;&#x5EFA;&#x5206;&#x652F;</h3>
+<h3 id="5-&#x521B;&#x5EFA;&#x5206;&#x652F;">5. &#x521B;&#x5EFA;&#x5206;&#x652F;</h3>
 <blockquote>
 <p>master&#x5206;&#x652F;&#x4FDD;&#x5B58;.md&#x7684;&#x6E90;&#x7801;&#xFF0C;gh-pages&#x5206;&#x652F;&#x4FDD;&#x5B58;&#x7F16;&#x8BD1;&#x751F;&#x6210;&#x7684;html&#x6587;&#x4EF6;    </p>
 </blockquote>
@@ -265,7 +265,7 @@
 <li>&#x5207;&#x6362;&#x5230;&#x4E3B;&#x5206;&#x652F;&#xFF1A;git checkout master</li>
 <li>&#x514B;&#x9686;&#x5206;&#x652F;&#x5230;&#x4E00;&#x4E2A;&#x65B0;&#x6587;&#x4EF6;&#xFF08;book-branch&#xFF09;&#xFF1A;git clone -b gh-pages git@github.com:USERNAME/web-cookbook.git book-branch, &#x5C06;book-branch&#x52A0;&#x5165;&#x5230;.gitignore&#x6587;&#x4EF6;&#x4E2D;&#xFF0C;&#x5373;&#x53EF;&#x5FFD;&#x7565;book-branch&#x7684;&#x4FEE;&#x6539;  </li>
 </ul>
-<h3 id="&#x7F16;&#x8BD1;">&#x7F16;&#x8BD1;</h3>
+<h3 id="6-&#x7F16;&#x8BD1;">6. &#x7F16;&#x8BD1;</h3>
 <ul>
 <li>&#x6784;&#x5EFA;&#x4E66;&#x7C4D;&#xFF1A;gitbook build</li>
 <li>&#x672C;&#x5730;&#x6D4F;&#x89C8;&#xFF1A;gitbook serve<blockquote>
@@ -273,7 +273,7 @@
 </blockquote>
 </li>
 </ul>
-<h3 id="&#x53D1;&#x5E03;&#x5230;github-pages">&#x53D1;&#x5E03;&#x5230;Github Pages</h3>
+<h3 id="7-&#x53D1;&#x5E03;&#x5230;github-pages">7. &#x53D1;&#x5E03;&#x5230;Github Pages</h3>
 <ul>
 <li>&#x5C06;_book&#x4E0B;&#x7684;&#x5185;&#x5BB9;&#x62F7;&#x8D1D;&#x5230;&#x5206;&#x652F;&#x4E2D;&#xFF0C;&#x5373;book-branch&#x6587;&#x4EF6;&#x5939;&#x4E2D;&#xFF1A;cp -r ./_book/* book-branch/</li>
 <li>&#x8FDB;&#x5165;book-branch&#x76EE;&#x5F55;&#x63D0;&#x4EA4;&#x4FEE;&#x6539;&#xFF1A;<ul>
@@ -284,7 +284,7 @@
 </li>
 <li>&#x8BBF;&#x95EE;USERNAME.github.io/web-cookbook&#x67E5;&#x770B;  </li>
 </ul>
-<h3 id="gulp&#x53D1;&#x5E03;gitbook&#x5230;github-pages">gulp&#x53D1;&#x5E03;Gitbook&#x5230;Github Pages</h3>
+<h3 id="8-gulp&#x53D1;&#x5E03;gitbook&#x5230;github-pages">8. gulp&#x53D1;&#x5E03;Gitbook&#x5230;Github Pages</h3>
 <pre><code>var gulp = require(&quot;gulp&quot;),  
     deploy = require(&quot;gulp-gh-pages&quot;);
 
