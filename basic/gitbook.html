@@ -53,7 +53,7 @@
         data-chapter-title="将Gitbook发布到Github Pages"
         data-filepath="basic/gitbook.md"
         data-basepath=".."
-        data-revision="Thu Apr 07 2016 19:28:45 GMT+0800 (CST)"
+        data-revision="Thu Apr 07 2016 19:38:02 GMT+0800 (CST)"
         data-innerlanguage="">
     
 
@@ -285,19 +285,20 @@
 <li>&#x8BBF;&#x95EE;USERNAME.github.io/web-cookbook&#x67E5;&#x770B;  </li>
 </ul>
 <h3 id="8-gulp&#x53D1;&#x5E03;gitbook&#x5230;github-pages">8. gulp&#x53D1;&#x5E03;Gitbook&#x5230;Github Pages</h3>
-<pre><code>var gulp = require(&quot;gulp&quot;),  
-    deploy = require(&quot;gulp-gh-pages&quot;);
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> gulp = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;gulp&quot;</span>),  
+    deploy = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;gulp-gh-pages&quot;</span>);
 
-gulp.task(&apos;publish&apos;, function () {  
-  return gulp.src(&quot;_book/\*\*/\*.\*&quot;)
+gulp.task(<span class="hljs-string">&apos;publish&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{  
+  <span class="hljs-keyword">return</span> gulp.src(<span class="hljs-string">&quot;_book/\*\*/\*.\*&quot;</span>)
     .pipe(deploy({
-      remoteUrl: &quot;git@github.com:USERNAME/web-cookbook.git&quot;
+      remoteUrl: <span class="hljs-string">&quot;git@github.com:USERNAME/web-cookbook.git&quot;</span>
     }))
-    .on(&quot;error&quot;, function(err){
-      console.log(err)
+    .on(<span class="hljs-string">&quot;error&quot;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err</span>)</span>{
+      <span class="hljs-built_in">console</span>.log(err)
     })
 });
 </code></pre>
+
                     
                     </section>
                 

@@ -53,7 +53,7 @@
         data-chapter-title="retina屏幕1px的border实现"
         data-filepath="css/border1px.md"
         data-basepath=".."
-        data-revision="Thu Apr 07 2016 19:28:45 GMT+0800 (CST)"
+        data-revision="Thu Apr 07 2016 19:38:02 GMT+0800 (CST)"
         data-innerlanguage="">
     
 
@@ -242,26 +242,27 @@
 <p>1px&#x7684;&#x8FB9;&#x6846;&#x5728;devicePixelRatio = 2&#x7684;retina&#x5C4F;&#x4E0B;&#x4F1A;&#x663E;&#x793A;&#x6210;2px</p>
 <h3 id="1-&#x4F7F;&#x7528;-scale05">1. &#x4F7F;&#x7528; scale(0.5)</h3>
 <p>&#x9700;&#x8981;&#x4F7F;&#x7528;&#x5230;:after&#x4F2A;&#x5143;&#x7D20;</p>
-<pre><code>.border {
-  position: relative;
+<pre><code class="lang-css"><span class="hljs-class">.border</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">position</span>:<span class="hljs-value"> relative</span></span>;
+}</span>
+<span class="hljs-rule"><span class="hljs-attribute">.border</span>:<span class="hljs-value">after {
+  content: <span class="hljs-string">&quot; &quot;</span></span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">position</span>:<span class="hljs-value"> absolute</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">top</span>:<span class="hljs-value"> <span class="hljs-number">0</span></span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">left</span>:<span class="hljs-value"> <span class="hljs-number">0</span></span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">width</span>:<span class="hljs-value"> <span class="hljs-number">200%</span></span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">height</span>:<span class="hljs-value"> <span class="hljs-number">200%</span></span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">border-bottom</span>:<span class="hljs-value"> <span class="hljs-number">1px</span> solid <span class="hljs-hexcolor">#ff803a</span></span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">-webkit-transform</span>:<span class="hljs-value"> <span class="hljs-function">scale</span>(<span class="hljs-number">0.5</span>)</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">transform</span>:<span class="hljs-value"> <span class="hljs-function">scale</span>(<span class="hljs-number">0.5</span>)</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">-webkit-transform-origin</span>:<span class="hljs-value"> <span class="hljs-number">0</span> <span class="hljs-number">0</span></span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">transform-origin</span>:<span class="hljs-value"> <span class="hljs-number">0</span> <span class="hljs-number">0</span></span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">box-sizing</span>:<span class="hljs-value"> border-box</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">pointer-events</span>:<span class="hljs-value"> none</span></span>;
 }
-.border:after {
-  content: &quot; &quot;;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 200%;
-  height: 200%;
-  border-bottom: 1px solid #ff803a;
-  -webkit-transform: scale(0.5);
-  transform: scale(0.5);
-  -webkit-transform-origin: 0 0;
-  transform-origin: 0 0;
-  box-sizing: border-box;
-  pointer-events: none;
-}
-</code></pre><p>stylus&#x5B9E;&#x73B0;&#xFF1A;</p>
-<pre><code>border-dpr(style, color, direction = all)
+</code></pre>
+<p>stylus&#x5B9E;&#x73B0;&#xFF1A;</p>
+<pre><code class="lang-css">border-dpr(style, color, direction = all)
   &amp; 
     position relative
     if direction == all 
@@ -294,16 +295,18 @@
         transform-origin 0 0
         box-sizing border-box
         pointer-events none    // &#x89E3;&#x51B3;&#x5185;&#x90E8;&#x5143;&#x7D20;&#x65E0;&#x6CD5;&#x70B9;&#x51FB;&#x95EE;&#x9898;
-</code></pre><h3 id="2-&#x4F7F;&#x7528;borderimage">2. &#x4F7F;&#x7528;border-image</h3>
+</code></pre>
+<h3 id="2-&#x4F7F;&#x7528;borderimage">2. &#x4F7F;&#x7528;border-image</h3>
 <p>&#x9700;&#x8981;&#x4F7F;&#x7528;&#x56FE;&#x7247;&#xFF0C;&#x5B9E;&#x73B0;&#x6548;&#x679C;&#x5982;&#x4E0B;&#x56FE;&#xFF1A;</p>
 <p><div style="width:100px;height:100px;border-width:1px;border-image: url(../images/border-line.png) 2 stretch;"></div> 
 <br></p>
-<pre><code>.border {
-    border-width:1px;
-    -webkit-border-image: url(&quot;border-line.png&quot;) 2 stretch; 
-    border-image: url(&quot;border-line.png&quot;) 2 stretch;
-}
+<pre><code class="lang-css"><span class="hljs-class">.border</span> <span class="hljs-rules">{
+    <span class="hljs-rule"><span class="hljs-attribute">border-width</span>:<span class="hljs-value"><span class="hljs-number">1px</span></span></span>;
+    <span class="hljs-rule"><span class="hljs-attribute">-webkit-border-image</span>:<span class="hljs-value"> <span class="hljs-function">url</span>(<span class="hljs-string">&quot;border-line.png&quot;</span>) <span class="hljs-number">2</span> stretch</span></span>; 
+    <span class="hljs-rule"><span class="hljs-attribute">border-image</span>:<span class="hljs-value"> <span class="hljs-function">url</span>(<span class="hljs-string">&quot;border-line.png&quot;</span>) <span class="hljs-number">2</span> stretch</span></span>;
+}</span>
 </code></pre>
+
                     
                     </section>
                 
