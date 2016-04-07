@@ -40,16 +40,17 @@
  * 访问USERNAME.github.io/web-cookbook查看  
 
 ### 8. gulp发布Gitbook到Github Pages
+```javascript
+var gulp = require("gulp"),  
+	deploy = require("gulp-gh-pages");
 
-    var gulp = require("gulp"),  
-		deploy = require("gulp-gh-pages");
-	
-	gulp.task('publish', function () {  
-	  return gulp.src("_book/\*\*/\*.\*")
-	    .pipe(deploy({
-	      remoteUrl: "git@github.com:USERNAME/web-cookbook.git"
-	    }))
-	    .on("error", function(err){
-	      console.log(err)
-	    })
-	});
+gulp.task('publish', function () {  
+  return gulp.src("_book/\*\*/\*.\*")
+    .pipe(deploy({
+      remoteUrl: "git@github.com:USERNAME/web-cookbook.git"
+    }))
+    .on("error", function(err){
+      console.log(err)
+    })
+});
+```
