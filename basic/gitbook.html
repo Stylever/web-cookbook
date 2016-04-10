@@ -5,11 +5,11 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>将Gitbook发布到Github Pages | Style&#39;s Gitbook</title>
+        <title>将Gitbook发布到Github Pages | Style&#39;s GitBook web-cookbook</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.6.7">
-        
+        <meta name="author" content="Style &lt;lidongyang23@gmail.com&gt;">
         
         <meta name="HandheldFriendly" content="true"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -19,6 +19,10 @@
         <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
         
     <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-disqus/plugin.css">
+        
     
         
         <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
@@ -53,7 +57,7 @@
         data-chapter-title="将Gitbook发布到Github Pages"
         data-filepath="basic/gitbook.md"
         data-basepath=".."
-        data-revision="Sat Apr 09 2016 14:55:39 GMT+0800 (CST)"
+        data-revision="Sun Apr 10 2016 21:24:25 GMT+0800 (CST)"
         data-innerlanguage="">
     
 
@@ -63,8 +67,15 @@
             
             
             
+                
+                <li>
+                    <a href="http://stylever.github.io/web-cookbook" target="blank" class="custom-link">Style&#39;s GitBook</a>
+                </li>
+            
             
 
+            
+            <li class="divider"></li>
             
 
             
@@ -249,7 +260,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../" >Style&#39;s Gitbook</a>
+        <a href="../" >Style&#39;s GitBook web-cookbook</a>
     </h1>
 </div>
 
@@ -319,6 +330,63 @@ gulp.task(<span class="hljs-string">&apos;publish&apos;</span>, <span class="hlj
     })
 });
 </code></pre>
+<h3 id="9-gitbook&#x7684;bookjson&#x6587;&#x4EF6;">9. Gitbook&#x7684;book.json&#x6587;&#x4EF6;</h3>
+<p>gitbook&#x5728;&#x7F16;&#x8BD1;&#x4E66;&#x7C4D;&#x7684;&#x65F6;&#x5019;&#x4F1A;&#x8BFB;&#x53D6;&#x4E66;&#x7C4D;&#x6E90;&#x7801;&#x9876;&#x5C42;&#x76EE;&#x5F55;&#x4E2D;&#x7684;book.js&#x6216;&#x8005;book.json&#xFF0C;&#x8FD9;&#x91CC;&#x4EE5;book.json&#x4E3A;&#x4F8B;&#xFF0C;&#x53C2;&#x8003;<a href="https://github.com/GitbookIO/gitbook" target="_blank">gitbook&#x6587;&#x6863;</a>&#x3002;</p>
+<pre><code class="lang-json">{
+    <span class="hljs-string">&quot;description&quot;</span>: <span class="hljs-literal">null</span>,
+    <span class="hljs-string">&quot;extension&quot;</span>: <span class="hljs-literal">null</span>,
+    <span class="hljs-string">&quot;generator&quot;</span>: <span class="hljs-string">&quot;site&quot;</span>,
+    <span class="hljs-string">&quot;isbn&quot;</span>: <span class="hljs-literal">null</span>,
+    <span class="hljs-string">&quot;links&quot;</span>: {
+        <span class="hljs-string">&quot;sharing&quot;</span>: {
+            <span class="hljs-string">&quot;all&quot;</span>: <span class="hljs-literal">null</span>,
+            <span class="hljs-string">&quot;facebook&quot;</span>: <span class="hljs-literal">null</span>,
+            <span class="hljs-string">&quot;google&quot;</span>: <span class="hljs-literal">null</span>,
+            <span class="hljs-string">&quot;twitter&quot;</span>: <span class="hljs-literal">null</span>,
+            <span class="hljs-string">&quot;weibo&quot;</span>: <span class="hljs-literal">null</span>
+        },
+        <span class="hljs-string">&quot;sidebar&quot;</span>: {
+            <span class="hljs-string">&quot;Style&apos;s GitBook&quot;</span>:<span class="hljs-string">&quot;http://stylever.github.io/web-cookbook&quot;</span>
+        }
+    },
+    <span class="hljs-string">&quot;output&quot;</span>: <span class="hljs-literal">null</span>,
+    <span class="hljs-string">&quot;pdf&quot;</span>: {
+        <span class="hljs-string">&quot;fontSize&quot;</span>: <span class="hljs-number">12</span>,
+        <span class="hljs-string">&quot;footerTemplate&quot;</span>: <span class="hljs-literal">null</span>,
+        <span class="hljs-string">&quot;headerTemplate&quot;</span>: <span class="hljs-literal">null</span>,
+        <span class="hljs-string">&quot;margin&quot;</span>: {
+            <span class="hljs-string">&quot;bottom&quot;</span>: <span class="hljs-number">36</span>,
+            <span class="hljs-string">&quot;left&quot;</span>: <span class="hljs-number">62</span>,
+            <span class="hljs-string">&quot;right&quot;</span>: <span class="hljs-number">62</span>,
+            <span class="hljs-string">&quot;top&quot;</span>: <span class="hljs-number">36</span>
+        },
+        <span class="hljs-string">&quot;pageNumbers&quot;</span>: <span class="hljs-literal">false</span>,
+        <span class="hljs-string">&quot;paperSize&quot;</span>: <span class="hljs-string">&quot;a4&quot;</span>
+    },
+    <span class="hljs-string">&quot;plugins&quot;</span>: [],
+    <span class="hljs-string">&quot;title&quot;</span>: <span class="hljs-literal">null</span>,
+    <span class="hljs-string">&quot;variables&quot;</span>: {}
+}
+</code></pre>
+<h3 id="10-disqus&#x8BC4;&#x8BBA;&#x63D2;&#x4EF6;">10. Disqus&#x8BC4;&#x8BBA;&#x63D2;&#x4EF6;</h3>
+<p><a href="https://disqus.com/" target="_blank">Disqus</a>&#x662F;&#x4E00;&#x6B3E;&#x7F51;&#x7AD9;&#x96C6;&#x6210;&#x8BC4;&#x8BBA;&#x7CFB;&#x7EDF;&#x7684;&#x5DE5;&#x5177;&#xFF0C;gitbook&#x53EF;&#x4EE5;&#x96C6;&#x6210;&#x3002;</p>
+<ul>
+<li>&#x5728;disqus&#x6CE8;&#x518C;&#x4E00;&#x4E2A;&#x8D26;&#x53F7;</li>
+<li>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;website</li>
+<li>&#x5B89;&#x88C5;disqus &#x63D2;&#x4EF6;<pre><code class="lang-javascript"> $ npm install gitbook-plugin-disqus
+</code></pre>
+</li>
+<li>&#x4FEE;&#x6539; book.json &#x914D;&#x7F6E;&#x6587;&#x4EF6;<pre><code class="lang-json">{
+ <span class="hljs-string">&quot;plugins&quot;</span>: [<span class="hljs-string">&quot;disqus&quot;</span>],
+ <span class="hljs-string">&quot;pluginsConfig&quot;</span>: {
+     <span class="hljs-string">&quot;disqus&quot;</span>: {
+         <span class="hljs-string">&quot;shortName&quot;</span>: <span class="hljs-string">&quot;introducetogitbook&quot;</span> (&#x5728;disqus&#x4E0A;&#x521B;&#x5EFA;&#x7684;website&#x7684;Shortname)
+     }
+ }  
+}
+</code></pre>
+</li>
+</ul>
 
                     
                     </section>
@@ -339,6 +407,14 @@ gulp.task(<span class="hljs-string">&apos;publish&apos;</span>, <span class="hlj
 
         
 <script src="../gitbook/app.js"></script>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-disqus/plugin.js"></script>
+    
 
     
     <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
@@ -362,7 +438,7 @@ gulp.task(<span class="hljs-string">&apos;publish&apos;</span>, <span class="hlj
 
 <script>
 require(["gitbook"], function(gitbook) {
-    var config = {"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"livereload":{}};
+    var config = {"disqus":{"shortName":"webcookbook","useIdentifier":false},"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"livereload":{}};
     gitbook.start(config);
 });
 </script>
