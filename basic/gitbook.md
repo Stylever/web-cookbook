@@ -100,7 +100,7 @@ gitbook在编译书籍的时候会读取书籍源码顶层目录中的book.js或
  * 创建一个website
  * 安装disqus 插件
  ```javascript
-    $ npm install gitbook-plugin-disqus -g
+    $ npm install gitbook-plugin-disqus
  ```
  * 修改 book.json 配置文件
  ```json

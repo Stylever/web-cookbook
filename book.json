@@ -1,0 +1,42 @@
+{
+    "author": "Style <lidongyang23@gmail.com>",
+    "title": null,
+    "description": "Style's GitBook Front-end | web-cookbook",
+    "extension": null,
+    "generator": "site",
+    "isbn": null,
+    "links": {
+        "sharing": {
+            "all": null,
+            "facebook": null,
+            "google": null,
+            "twitter": null,
+            "weibo": null
+        },
+        "sidebar": {
+            "Style's GitBook":"http://stylever.github.io/web-cookbook"
+        }
+    },
+    "output": null,
+    "pdf": {
+        "fontSize": 12,
+        "footerTemplate": null,
+        "headerTemplate": null,
+        "margin": {
+            "bottom": 36,
+            "left": 62,
+            "right": 62,
+            "top": 36
+        },
+        "pageNumbers": false,
+        "paperSize": "a4"
+    },
+    "plugins": ["disqus"],
+    "pluginsConfig": {
+        "disqus": {
+            "shortName": "webcookbook"
+        }
+    },
+    "title": "Style's GitBook web-cookbook",
+    "variables": {}
+}
