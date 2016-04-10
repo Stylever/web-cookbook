@@ -54,3 +54,62 @@ gulp.task('publish', function () {
     })
 });
 ```
+
+### 9. Gitbook的book.json文件
+gitbook在编译书籍的时候会读取书籍源码顶层目录中的book.js或者book.json，这里以book.json为例，参考[gitbook文档](https://github.com/GitbookIO/gitbook)。
+```json
+{
+    "description": null,
+    "extension": null,
+    "generator": "site",
+    "isbn": null,
+    "links": {
+        "sharing": {
+            "all": null,
+            "facebook": null,
+            "google": null,
+            "twitter": null,
+            "weibo": null
+        },
+        "sidebar": {
+            "Style's GitBook":"http://stylever.github.io/web-cookbook"
+        }
+    },
+    "output": null,
+    "pdf": {
+        "fontSize": 12,
+        "footerTemplate": null,
+        "headerTemplate": null,
+        "margin": {
+            "bottom": 36,
+            "left": 62,
+            "right": 62,
+            "top": 36
+        },
+        "pageNumbers": false,
+        "paperSize": "a4"
+    },
+    "plugins": [],
+    "title": null,
+    "variables": {}
+}
+```
+### 10. Disqus评论插件
+[Disqus](https://disqus.com/)是一款网站集成评论系统的工具，gitbook可以集成。
+ * 在disqus注册一个账号
+ * 创建一个website
+ * 安装disqus 插件
+ ```javascript
+    $ npm install gitbook-plugin-disqus -g
+ ```
+ * 修改 book.json 配置文件
+ ```json
+ {
+    "plugins": ["disqus"],
+    "pluginsConfig": {
+        "disqus": {
+            "shortName": "introducetogitbook" (在disqus上创建的website的Shortname)
+        }
+    }  
+  }
+ ```
