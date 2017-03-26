@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>简介 · Style's GitBook web-cookbook</title>
+        <title>Javascript技巧 · Style's GitBook web-cookbook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="gitbook.html" />
+    <link rel="next" href="meta.html" />
     
     
-    <link rel="prev" href="../" />
+    <link rel="prev" href="html5.html" />
     
 
     </head>
@@ -104,9 +104,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2" data-path="./">
+        <li class="chapter " data-level="1.2" data-path="../basic/">
             
-                <a href="./">
+                <a href="../basic/">
             
                     
                     简介
@@ -118,9 +118,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.1" data-path="gitbook.html">
+        <li class="chapter " data-level="1.2.1" data-path="../basic/gitbook.html">
             
-                <a href="gitbook.html">
+                <a href="../basic/gitbook.html">
             
                     
                     将Gitbook发布到Github Pages
@@ -207,7 +207,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6" data-path="../summary/README.md">
+        <li class="chapter " data-level="1.6" data-path="README.md">
             
                 <span>
             
@@ -221,9 +221,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.6.1" data-path="../summary/border1px.html">
+        <li class="chapter " data-level="1.6.1" data-path="border1px.html">
             
-                <a href="../summary/border1px.html">
+                <a href="border1px.html">
             
                     
                     retina屏幕1px的border实现
@@ -234,9 +234,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.2" data-path="../summary/html5.html">
+        <li class="chapter " data-level="1.6.2" data-path="html5.html">
             
-                <a href="../summary/html5.html">
+                <a href="html5.html">
             
                     
                     移动端HTML5页面常见问题
@@ -247,9 +247,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.3" data-path="../summary/skills.html">
+        <li class="chapter active" data-level="1.6.3" data-path="skills.html">
             
-                <a href="../summary/skills.html">
+                <a href="skills.html">
             
                     
                     Javascript技巧
@@ -260,9 +260,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.4" data-path="../summary/meta.html">
+        <li class="chapter " data-level="1.6.4" data-path="meta.html">
             
-                <a href="../summary/meta.html">
+                <a href="meta.html">
             
                     
                     meta设置
@@ -308,7 +308,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >简介</a>
+        <a href=".." >Javascript技巧</a>
     </h1>
 </div>
 
@@ -323,10 +323,50 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="styles-gitbook">Style&apos;s Gitbook</h1>
-<center>
-    <img src="../images/gitbook.png">
-</center>
+                                <h1 id="javascript&#x6280;&#x5DE7;sss">Javascript&#x6280;&#x5DE7;sss</h1>
+<h3 id="1-javascript&#x6570;&#x7EC4;&#x8F6C;&#x6362;&#x4E3A;csv&#x683C;&#x5F0F;">1. Javascript&#x6570;&#x7EC4;&#x8F6C;&#x6362;&#x4E3A;CSV&#x683C;&#x5F0F;</h3>
+<pre><code>&lt;p id=&quot;sports&quot;&gt;basketball,badminton,jogging&lt;/p&gt;
+</code></pre><pre><code class="lang-javascript"><span class="hljs-keyword">var</span> sportsArr = [<span class="hljs-string">&apos;basketball&apos;</span>, <span class="hljs-string">&apos;badminton&apos;</span>, <span class="hljs-string">&apos;jogging&apos;</span>];
+<span class="hljs-keyword">var</span> csv = sportsArr.valueOf();
+<span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;sports&apos;</span>).innerHTML = csv;
+</code></pre>
+<p>&#x6216;&#x8005;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> sports = [<span class="hljs-string">&apos;basketball&apos;</span>, <span class="hljs-string">&apos;badminton&apos;</span>, <span class="hljs-string">&apos;jogging&apos;</span>];
+<span class="hljs-keyword">var</span> csv = sports.join(<span class="hljs-string">&apos;,&apos;</span>);
+</code></pre>
+<h3 id="2-&#x5C06;csv&#x683C;&#x5F0F;&#x91CD;&#x65B0;&#x8F6C;&#x6362;&#x56DE;javscript&#x6570;&#x7EC4;">2. &#x5C06;CSV&#x683C;&#x5F0F;&#x91CD;&#x65B0;&#x8F6C;&#x6362;&#x56DE;Javscript&#x6570;&#x7EC4;</h3>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> csv = <span class="hljs-string">&apos;basketball,badminton,jogging&apos;</span>;
+<span class="hljs-keyword">var</span> sportsArr = csv.split(<span class="hljs-string">&apos;,&apos;</span>);
+</code></pre>
+<h3 id="3-&#x79FB;&#x9664;&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x67D0;&#x4E2A;&#x5143;&#x7D20;">3. &#x79FB;&#x9664;&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x67D0;&#x4E2A;&#x5143;&#x7D20;</h3>
+<pre><code class="lang-javascript">&#x5220;&#x9664;&#x6570;&#x7EC4;&#x4E2D;&#x7B2C;&#x4E8C;&#x4E2A;&#x5143;&#x7D20;
+<span class="hljs-keyword">var</span> sportsArr = [<span class="hljs-string">&apos;basketball&apos;</span>, <span class="hljs-string">&apos;badminton&apos;</span>, <span class="hljs-string">&apos;jogging&apos;</span>];
+sportsArr.splice(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>);
+</code></pre>
+<h3 id="4-&#x4EA7;&#x751F;1&#x5230;n&#x7684;&#x968F;&#x673A;&#x6570;">4. &#x4EA7;&#x751F;1&#x5230;N&#x7684;&#x968F;&#x673A;&#x6570;</h3>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> random = <span class="hljs-built_in">Math</span>.floor(<span class="hljs-built_in">Math</span>.random() * N + <span class="hljs-number">1</span>);
+</code></pre>
+<h3 id="5-&#x53BB;&#x6389;&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x91CD;&#x590D;&#x5143;&#x7D20;">5. &#x53BB;&#x6389;&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x91CD;&#x590D;&#x5143;&#x7D20;</h3>
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">removeDuplicates</span>(<span class="hljs-params">arr</span>) </span>{
+    <span class="hljs-keyword">var</span> tempObj = {};
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; arr.length; i++) {
+        tempObj[arr[i]] = <span class="hljs-literal">true</span>;
+    }
+
+    <span class="hljs-keyword">var</span> tempArr = [];
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> key <span class="hljs-keyword">in</span> tempObj) {
+        tempArr.push(key);
+    }
+    <span class="hljs-keyword">return</span> tempArr;
+}
+</code></pre>
+<h3 id="6-&#x53BB;&#x6389;&#x5B57;&#x7B26;&#x4E32;&#x524D;&#x540E;&#x591A;&#x4F59;&#x7684;&#x7A7A;&#x683C;">6. &#x53BB;&#x6389;&#x5B57;&#x7B26;&#x4E32;&#x524D;&#x540E;&#x591A;&#x4F59;&#x7684;&#x7A7A;&#x683C;</h3>
+<pre><code class="lang-javascript"><span class="hljs-keyword">if</span> (!<span class="hljs-built_in">String</span>.prototype.trim) {
+    <span class="hljs-built_in">String</span>.prototype.trim=<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+       <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.replace(<span class="hljs-regexp">/^\s+|\s+$/g</span>, <span class="hljs-string">&apos;&apos;</span>);
+    };
+}
+</code></pre>
 
                                 
                                 </section>
@@ -354,12 +394,12 @@
 
             
                 
-                <a href="../" class="navigation navigation-prev " aria-label="Previous page: Introduction">
+                <a href="html5.html" class="navigation navigation-prev " aria-label="Previous page: 移动端HTML5页面常见问题">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="gitbook.html" class="navigation navigation-next " aria-label="Next page: 将Gitbook发布到Github Pages">
+                <a href="meta.html" class="navigation navigation-next " aria-label="Next page: meta设置">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -370,7 +410,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"简介","level":"1.2","depth":1,"next":{"title":"将Gitbook发布到Github Pages","level":"1.2.1","depth":2,"path":"basic/gitbook.md","ref":"basic/gitbook.md","articles":[]},"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"disqus":{"shortName":"webcookbook"},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Style <lidongyang23@gmail.com>","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"","variables":{},"title":"Style's GitBook web-cookbook","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{}},"gitbook":"*","description":"Style's GitBook Front-end | web-cookbook","extension":null},"file":{"path":"basic/README.md","mtime":"2016-04-12T06:15:07.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-03-26T05:55:04.144Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Javascript技巧","level":"1.6.3","depth":2,"next":{"title":"meta设置","level":"1.6.4","depth":2,"path":"summary/meta.md","ref":"summary/meta.md","articles":[]},"previous":{"title":"移动端HTML5页面常见问题","level":"1.6.2","depth":2,"path":"summary/html5.md","ref":"summary/html5.md","articles":[]},"dir":"ltr"},"config":{"plugins":["livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"disqus":{"shortName":"webcookbook"},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Style <lidongyang23@gmail.com>","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"","variables":{},"title":"Style's GitBook web-cookbook","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{}},"gitbook":"*","description":"Style's GitBook Front-end | web-cookbook","extension":null},"file":{"path":"summary/skills.md","mtime":"2017-03-18T08:25:21.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-03-26T05:55:04.144Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
